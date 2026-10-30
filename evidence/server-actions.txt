@@ -1,0 +1,16 @@
+# Server Action references in client bundles (ID prefix, name)
+4045060553  createBitelevateCashfreeOrder
+40d93da1cc  loginToPortal
+40645a00e0  submitCandidateApplication
+4026f27aeb  submitDiaryEntry
+40247ba446  submitInquiry
+40d4486f33  submitServiceLead
+40cfc00a77  subscribeToNewsletter
+6089502831  verifyBitelevatePayment
+
+# Framework version strings in client bundles
+version:"15.5.18"
+
+# Search for bot protection or length limits across 30 chunks + portal chunk
+maxLength|captcha|turnstile|hcaptcha|honeypot matches: 0
+sourceMappingURL references: 0

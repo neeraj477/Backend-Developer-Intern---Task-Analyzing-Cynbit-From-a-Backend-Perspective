@@ -1,0 +1,10 @@
+# .github/dependabot.yml: framework security PRs within a day
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: daily
+    groups:
+      nextjs:
+        patterns: ["next", "react", "react-dom", "eslint-config-next"]

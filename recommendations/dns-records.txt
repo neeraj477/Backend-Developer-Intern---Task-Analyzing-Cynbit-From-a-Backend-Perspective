@@ -1,0 +1,11 @@
+; 1. Microsoft 365 DKIM: copy both values from Microsoft Defender > Email authentication > DKIM, then enable signing
+selector1._domainkey.cynbit.in.  CNAME  <value shown in Microsoft 365>
+selector2._domainkey.cynbit.in.  CNAME  <value shown in Microsoft 365>
+
+; 2. DMARC: collect reports now, enforce once every legitimate sender passes
+_dmarc.cynbit.in.  TXT  "v=DMARC1; p=none; rua=mailto:dmarc-reports@cynbit.in"
+; after 2-4 clean weeks: p=quarantine, then p=reject
+
+; 3. CAA: only the certificate authority Vercel uses for these hosts may issue
+cynbit.in.  CAA  0 issue "letsencrypt.org"
+cynbit.in.  CAA  0 iodef "mailto:security@cynbit.in"
